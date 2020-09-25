@@ -8,14 +8,12 @@ from models.detection.backbone_utils import resnet_fpn_backbone
 from models.detection.rpn import AnchorGenerator
 from utils.detection import Trainer, Logger, Tester, Checker, APCounter, Saver, LRScheduler, get_dataset_from_pickle
 from tensorboardX import SummaryWriter
-import os
 
 batch_size = 16
-# weight_decay, batch_size, learning_rate, anchor_ratios, anchor_sizes_min, image_size
-comment = "-fasterrcnn,wd=4e-5,bs=16,lr=0.05,anchor=0.5_1_2,anchor_min=16,size=1024"  # (0.015, 0.1, 1.25, 3.)
+comment = "-fasterrcnn,wd=4e-5,bs=16,lr=0.05"
 
 # --------------------------------
-root_dir = "."
+root_dir = r'.'
 images_folder = 'JPEGImages'
 pkl_folder = 'pkl'
 
